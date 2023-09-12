@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SuppressWarnings({"unused", "static-method"})
 public class JSONWriterTest {
-  /*
+
   @Nested
   public class Q1 {
     @Test @Tag("Q1")
@@ -138,7 +138,7 @@ public class JSONWriterTest {
     }
   }
 
-
+/*
   @Nested
   public class Q5 {
     @Test @Tag("Q5")
