@@ -7,8 +7,8 @@ import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.RECORD_COMPONENT;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-@Retention(RUNTIME)
-@Target({METHOD, RECORD_COMPONENT})
+@Retention(RUNTIME)/*Moment ou c'est utilisé*/
+@Target({METHOD, RECORD_COMPONENT}) /*cible potentielles*/
 public @interface JSONProperty {
   String value();
 }

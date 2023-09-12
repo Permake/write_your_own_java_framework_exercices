@@ -20,9 +20,10 @@ public final class JSONWriter {
         .getPropertyDescriptors())
         .filter(property -> !property.getName().equals("class"))
         .<Generator>map(property -> {
-          var key = "\"" + property.getName()+ "\": ";
-          var readMethod = property.getReadMethod();
-          return (writer, bean) -> key  + writer.toJSON(Utils.invokeMethod(bean, readMethod));
+          var readMethod = property.getReadMethod();var annotation = readMethod.getAnnotation(JSONProperty.class);
+          var name = (annotation != null) ? annotation.value() : property.getName();
+          var key = "\"" + name + "\": ";
+          return (writer, bean) -> key + writer.toJSON(Utils.invokeMethod(bean, readMethod));
         })
         .toList();
     }
