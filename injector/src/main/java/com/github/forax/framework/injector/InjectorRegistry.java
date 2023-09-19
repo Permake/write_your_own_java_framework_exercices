@@ -76,8 +76,13 @@ public final class InjectorRegistry {
     });
   }
 
-  public <T> void registerProviderClass(Class<T> providerClass) {
+  public void registerProviderClass(Class<?> providerClass) {
         Objects.requireNonNull(providerClass);
-        registerProviderClass(providerClass, providerClass);
+        registerProviderClassImpl(providerClass);
+  }
+
+  private <T> void registerProviderClassImpl(Class<T> providerClass) {
+      registerProviderClass(providerClass, providerClass);
+
   }
 }
