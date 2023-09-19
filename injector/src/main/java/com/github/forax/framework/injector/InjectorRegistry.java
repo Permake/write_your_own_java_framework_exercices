@@ -1,5 +1,64 @@
 package com.github.forax.framework.injector;
 
+import java.beans.PropertyDescriptor;
+import java.util.*;
+import java.util.function.Supplier;
+
 public final class InjectorRegistry {
-  // TODO
+    private final HashMap<Class<?>, Supplier<?>> registry = new HashMap<>();
+
+    public InjectorRegistry() {
+    }
+  public <T>void registerInstance(Class<T> type, T instance) {
+      Objects.requireNonNull(type);
+      Objects.requireNonNull(instance);
+      registerProvider(type, () -> instance);
+  }
+
+    public <T> void registerProvider(Class<T> type, Supplier<T> supplier) {
+        Objects.requireNonNull(type);
+        Objects.requireNonNull(supplier);
+        var existing = registry.putIfAbsent(type, supplier);
+        if (existing != null) {
+            throw new IllegalStateException("They're is already a value in the register for the type : " + type.getName());
+        }
+    }
+
+  public <T> T lookupInstance(Class<T> type) {
+    Objects.requireNonNull(type);
+    var instance = registry.get(type);
+    if (instance == null) {
+        throw new IllegalStateException("The type " + type.getName() + " doesn't have an associated instance in the register");
+    }
+    return type.cast(instance.get());
+  }
+
+  static List<PropertyDescriptor> findInjectableProperties(Class<?> type) {
+    Objects.requireNonNull(type);
+    return Arrays.stream(Utils.beanInfo(type)
+      .getPropertyDescriptors())
+            .filter(propertyDescriptor -> {
+                var setter = propertyDescriptor.getWriteMethod();
+                return setter != null && setter.isAnnotationPresent(Inject.class);
+            })
+ /*     .filter(propertyDescriptor -> !Objects.isNull(
+        propertyDescriptor.getWriteMethod())
+        && propertyDescriptor.getWriteMethod()
+        .isAnnotationPresent(Inject.class))*/
+      .toList();
+  }
+
+  public <T> void registerProviderClass(Class<T> type, Class<? extends T> providerClass) {
+    Objects.requireNonNull(type);
+    Objects.requireNonNull(providerClass);
+    var constructor = Utils.defaultConstructor(providerClass);
+    var properties = findInjectableProperties(providerClass);
+      registerProvider(type, () -> {
+      var instance = Utils.newInstance(constructor);
+      for (var property : properties) {
+        Utils.invokeMethod(instance, property.getWriteMethod(), lookupInstance(property.getPropertyType()));
+      }
+      return instance;
+    });
+  }
 }
