@@ -77,6 +77,7 @@ public final class InjectorRegistry {
   }
 
   public <T> void registerProviderClass(Class<T> providerClass) {
+        Objects.requireNonNull(providerClass);
         registerProviderClass(providerClass, providerClass);
   }
 }
