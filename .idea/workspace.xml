@@ -5,13 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74bd28e4-ede9-4bbb-a92f-dae249a45c06" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/injector/src/main/java/com/github/forax/framework/injector/InjectorRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/injector/src/main/java/com/github/forax/framework/injector/InjectorRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/injector/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/injector/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interceptor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interceptor/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interceptor/src/main/java/org/github/forax/framework/interceptor/AroundAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/interceptor/src/main/java/org/github/forax/framework/interceptor/AroundAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interceptor/src/main/java/org/github/forax/framework/interceptor/InterceptorRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/interceptor/src/main/java/org/github/forax/framework/interceptor/InterceptorRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interceptor/src/test/java/org/github/forax/framework/interceptor/InterceptorRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/interceptor/src/test/java/org/github/forax/framework/interceptor/InterceptorRegistryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mapper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mapper/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orm/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/orm/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,33 +50,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/6ifo1/baptiste.mlynarz/git/write_your_own_java_framework_exercices",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/forax/git/write_your_own_java_framework_exercices/interceptor&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/interceptor" />
       <recent name="$PROJECT_DIR$/orm/src/main/java/com/github/forax/framework/orm" />
       <recent name="$PROJECT_DIR$/orm" />
       <recent name="$PROJECT_DIR$/mapper/src/main/java/com/github/forax/framework/mapper" />
       <recent name="$PROJECT_DIR$/mapper" />
-      <recent name="$PROJECT_DIR$/interceptor/src/main/java/org/github/forax/framework/interceptor" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.github.forax.framework.interceptor" />
@@ -81,7 +91,22 @@
       <command value="mvn package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InjectorRegistryTest">
+  <component name="RunManager" selected="JUnit.InterceptorRegistryTest$Q2">
+    <configuration name="InjectorRegistryTest$Q1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="injector" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.forax.framework.injector.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.forax.framework.injector.InjectorRegistryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.github.forax.framework.injector.InjectorRegistryTest$Q1" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InjectorRegistryTest$Q2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="injector" />
       <extension name="coverage">
@@ -92,51 +117,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.github.forax.framework.injector.InjectorRegistryTest" />
       <option name="MAIN_CLASS_NAME" value="com.github.forax.framework.injector.InjectorRegistryTest$Q2" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InjectorRegistryTest$Q4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="injector" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.forax.framework.injector.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.github.forax.framework.injector.InjectorRegistryTest" />
-      <option name="MAIN_CLASS_NAME" value="com.github.forax.framework.injector.InjectorRegistryTest$Q4" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InjectorRegistryTest$Q5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="injector" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.forax.framework.injector.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.github.forax.framework.injector.InjectorRegistryTest" />
-      <option name="MAIN_CLASS_NAME" value="com.github.forax.framework.injector.InjectorRegistryTest$Q5" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InjectorRegistryTest$Q6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="injector" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.forax.framework.injector.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.github.forax.framework.injector.InjectorRegistryTest" />
-      <option name="MAIN_CLASS_NAME" value="com.github.forax.framework.injector.InjectorRegistryTest$Q6" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,64 +137,78 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InterceptorRegistryTest$Q2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="interceptor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.github.forax.framework.interceptor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.github.forax.framework.interceptor.InterceptorRegistryTest" />
+      <option name="MAIN_CLASS_NAME" value="org.github.forax.framework.interceptor.InterceptorRegistryTest$Q2" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JSONWriterTest$Q2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mapper" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.forax.framework.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.forax.framework.mapper.JSONWriterTest" />
+      <option name="MAIN_CLASS_NAME" value="com.github.forax.framework.mapper.JSONWriterTest$Q2" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mapper" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="mapper" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.InjectorRegistryTest$Q1" />
+      <item itemvalue="JUnit.InjectorRegistryTest$Q2" />
+      <item itemvalue="JUnit.InterceptorRegistryTest$Q2" />
+      <item itemvalue="JUnit.JSONWriterTest$Q2" />
+      <item itemvalue="JUnit.InjectorRegistryTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InterceptorRegistryTest$Q2" />
         <item itemvalue="JUnit.InjectorRegistryTest" />
-        <item itemvalue="JUnit.InjectorRegistryTest$Q6" />
-        <item itemvalue="JUnit.InjectorRegistryTest$Q5" />
-        <item itemvalue="JUnit.InjectorRegistryTest$Q4" />
         <item itemvalue="JUnit.InjectorRegistryTest$Q2" />
+        <item itemvalue="JUnit.InjectorRegistryTest$Q1" />
+        <item itemvalue="JUnit.JSONWriterTest$Q2" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task id="LOCAL-00001" summary="Exercice 4 TP1">
-      <option name="closed" value="true" />
-      <created>1694512454387</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1694512454387</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Exercice 6 (5 pas fait) TP1">
-      <option name="closed" value="true" />
-      <created>1694513628186</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1694513628186</updated>
-    </task>
     <task active="true" id="Default" summary="Default task">
-      <changelist id="74bd28e4-ede9-4bbb-a92f-dae249a45c06" name="Changes" comment="Exercice 6 (5 pas fait) TP1" />
-      <created>1694518704979</created>
+      <changelist id="74bd28e4-ede9-4bbb-a92f-dae249a45c06" name="Changes" comment="update IntelliJ files" />
+      <created>1695718299738</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1694518704979</updated>
-      <workItem from="1694518708198" duration="518000" />
+      <updated>1695718299738</updated>
+      <workItem from="1695718304088" duration="10000" />
+      <workItem from="1695718330480" duration="68000" />
+      <workItem from="1695718414668" duration="55000" />
     </task>
-    <task id="LOCAL-00003" summary="Exercice 5 TP2">
-      <created>1695114686727</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1695114686727</updated>
-    </task>
-    <task id="LOCAL-00004" summary="TP2 fini">
-      <created>1695116850608</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1695116850608</updated>
-    </task>
-    <task id="LOCAL-00005" summary="TP2 fini">
-      <created>1695116878462</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1695116878462</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,8 +227,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="use List instead of Stream" />
-    <MESSAGE value="update and fix typos" />
     <MESSAGE value="add a section on dependency checking" />
     <MESSAGE value="Utils.defaultConstructor and Utils.newInstance should propagate the type of the class" />
     <MESSAGE value="do not try to validate the dependency graph before calling lookup()" />
@@ -250,18 +242,16 @@
     <MESSAGE value="fix typos" />
     <MESSAGE value="run CI with Java 19" />
     <MESSAGE value="fix typo" />
-    <MESSAGE value="update to Java 21" />
     <MESSAGE value="move to Java 21" />
     <MESSAGE value="add mdule IntelliJ file" />
     <MESSAGE value="21 is not yet released" />
-    <MESSAGE value="Exercice 4 TP1" />
-    <MESSAGE value="Exercice 6 (5 pas fait) TP1" />
-    <MESSAGE value="Exercice 5 TP2" />
-    <MESSAGE value="TP2 fini" />
-    <option name="LAST_COMMIT_MESSAGE" value="TP2 fini" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="use Java 20" />
+    <MESSAGE value="IntelliJ does not recognize enablePreview XML element" />
+    <MESSAGE value="update rEADME" />
+    <MESSAGE value="Use List.reversed()" />
+    <MESSAGE value="update to Java 21" />
+    <MESSAGE value="remove useless throws Throwable" />
+    <MESSAGE value="update IntelliJ files" />
+    <option name="LAST_COMMIT_MESSAGE" value="update IntelliJ files" />
   </component>
 </project>

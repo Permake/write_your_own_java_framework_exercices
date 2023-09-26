@@ -19,8 +19,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <groupId>org.apache.maven.plugins</groupId>
                 <configuration>
-                    <source>18</source>
-                    <target>18</target>
+                    <release>21</release>
+                    <source>21</source>
+                    <target>21</target>
                     <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
             </plugin>
