@@ -16,19 +16,20 @@ public final class JSONWriter {
   private static final ClassValue<List<Generator>> CACHE = new ClassValue<>() {
     @Override
     protected List<Generator> computeValue(Class<?> type) {
+      var val = type.getRecordComponents();
       return Arrays.stream(Utils.beanInfo(type)
-        .getPropertyDescriptors())
-        .filter(property -> !property.getName().equals("class"))
-        .<Generator>map(property -> {
-          var readMethod = property.getReadMethod();var annotation = readMethod.getAnnotation(JSONProperty.class);
-          var name = (annotation != null) ? annotation.value() : property.getName();
-          var key = "\"" + name + "\": ";
-          return (writer, bean) -> key + writer.toJSON(Utils.invokeMethod(bean, readMethod));
-        })
-        .toList();
+          .getPropertyDescriptors())
+          .filter(property -> !property.getName().equals("class"))
+          .<Generator>map(property -> {
+            var readMethod = property.getReadMethod();
+            var annotation = readMethod.getAnnotation(JSONProperty.class);
+            var name = (annotation != null) ? annotation.value() : property.getName();
+            var key = "\"" + name + "\": ";
+            return (writer, bean) -> key + writer.toJSON(Utils.invokeMethod(bean, readMethod));
+          })
+          .toList();
     }
   };
-
 
   public String toJSON(Object o) {
     return switch (o) {
@@ -41,12 +42,11 @@ public final class JSONWriter {
     };
   }
 
-
   private String objectToJSON(Object o) {
 
     return CACHE.get(o.getClass()).stream()
-      .map(generator -> generator.generate(this, o))
-      .collect(joining(", ", "{","}"));
+        .map(generator -> generator.generate(this, o))
+        .collect(joining(", ", "{", "}"));
 
   }
 }

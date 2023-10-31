@@ -27,7 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SuppressWarnings("static-method")
 public class ORMTest {
-  /*
+
   @Nested
   public class Q1 {
     @Test @Tag("Q1")
@@ -206,7 +206,6 @@ public class ORMTest {
   public static final class EmptyBean {
     public EmptyBean() { }
   }
-
 
   @Nested
   public class Q3 {
@@ -432,7 +431,6 @@ public class ORMTest {
       this.age = age;
     }
   }
-
   @Nested
   public class Q5 {
 
@@ -594,6 +592,7 @@ public class ORMTest {
   }
 
 
+
   @Nested
   public class Q6 {
     @Test @Tag("Q6")
@@ -654,7 +653,6 @@ public class ORMTest {
       assertThrows(NullPointerException.class, () -> ORM.createRepository(null));
     }
   }
-
   @Nested
   public class Q7 {
 
@@ -774,7 +772,7 @@ public class ORMTest {
     public void testCreateSaveQuery() {
       var beanInfo = Utils.beanInfo(Person.class);
       var sqlQuery = ORM.createSaveQuery("PERSON", beanInfo);
-      assertTrue(sqlQuery.endsWith("INTO PERSON (id, name) VALUES (?, ?);"));
+      assertTrue(sqlQuery.endsWith("INTO PERSON (ID, NAME) VALUES (?, ?);"));
     }
 
     @Test @Tag("Q8")
@@ -849,7 +847,6 @@ public class ORMTest {
       this.id = id;
     }
   }
-
   @Nested
   class Q9 {
 
@@ -867,6 +864,13 @@ public class ORMTest {
         var data2 = repository.save(new Data());
         assertEquals("2", data2.id);
       });
+    }
+
+    @Test @Tag("Q9")
+    public void testFindId() {
+      var beanInfo = Utils.beanInfo(Person.class);
+      var property = ORM.findId(beanInfo);
+      assertEquals("id", property.getName());
     }
   }
 
@@ -991,12 +995,6 @@ public class ORMTest {
   public class Q11 {
     public static final class NoId { }
 
-    @Test @Tag("Q11")
-    public void testFindId() {
-      var beanInfo = Utils.beanInfo(Person.class);
-      var property = ORM.findId(beanInfo);
-      assertEquals("id", property.getName());
-    }
 
     @Test @Tag("Q11")
     public void testFindById() throws SQLException {
@@ -1049,7 +1047,6 @@ public class ORMTest {
       });
     }
   }
-
 
   @Nested
   public class Q12 {
@@ -1122,7 +1119,6 @@ public class ORMTest {
     }
 
   }
-
 
   @Nested
   class Q13 {
@@ -1262,7 +1258,5 @@ public class ORMTest {
             });
       });
     }
-
   }
-  */
 }
